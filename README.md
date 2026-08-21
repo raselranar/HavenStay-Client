@@ -6,7 +6,7 @@ A modern, high-performance real estate and rental management platform designed t
 
 ## Project Links
 
-- **Live Deployment (Vercel):** [https://b13-haven-stay-client.vercel.app](https://b13-haven-stay-client.vercel.app)
+- **Live Deployment (Vercel):** https://haven-stay-client.vercel.app
 - **Front-End Client Repository:** [GitHub Link](https://github.com/raselranar/B13-HavenStay-Client)
 - **Back-End Server Repository:** [GitHub Link](https://github.com/raselranar/B13-HavenStay-Server)
 
