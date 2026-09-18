@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 import Image from "next/image";
+import { Badge } from "../ui/badge";
 import {
   Select,
   SelectContent,
@@ -42,6 +43,16 @@ export default function Banner() {
       />
 
       <div className="relative max-w-4xl mx-auto px-6 text-center text-white z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-4">
+          <Badge className="h-7 px-3.5 text-xs bg-white/15 text-white border border-white/25 backdrop-blur-md">
+            Full-Stack Property Rental &amp; Management Platform
+          </Badge>
+        </motion.div>
+
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -55,8 +66,9 @@ export default function Banner() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-lg text-gray-200 max-w-2xl mx-auto mb-12">
-          Discover curated luxury properties for short-term stays and long-term
-          residence. Trust, transparency, and exquisite comfort.
+          HavenStay connects verified tenants with trusted property owners — a
+          complete platform for listing, renting, booking, and managing homes,
+          with secure online payments and full admin oversight.
         </motion.p>
 
         {/* Search Bar Container */}
