@@ -12,9 +12,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "HavenStay",
+  title: "HavenStay — Full-Stack Property Rental & Management Platform",
   description:
-    "A modern and stylish hotel booking website built with Next.js, offering a seamless user experience for finding and reserving accommodations worldwide.",
+    "A full-stack rental and property management platform where verified tenants discover homes, owners list and manage properties, and admins keep everything running. Includes real listings, bookings, Stripe payments, and role-based analytics dashboards.",
 };
 
 export default async function RootLayout({ children }) {
