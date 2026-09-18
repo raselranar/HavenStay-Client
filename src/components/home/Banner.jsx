@@ -33,7 +33,7 @@ export default function Banner() {
   };
 
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center bg-[url('/hero-bg.jpg')] bg-cover bg-center pt-16">
+    <section className="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center pt-16">
       <div className="absolute inset-0 bg-black/40 z-1" />
       <Image
         src="/banner.jpg"
