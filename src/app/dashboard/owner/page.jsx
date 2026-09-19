@@ -66,7 +66,7 @@ export default function OwnerAnalyticsDashboard() {
         <p className="text-red-600 font-medium">{error}</p>
         <button
           onClick={() => router.refresh()}
-          className="mt-4 px-4 py-2 bg-white text-red-700 border border-red-200 rounded-xl text-sm font-semibold hover:bg-red-100 transition">
+          className="mt-4 px-4 py-2 bg-background text-red-700 border border-red-200 rounded-xl text-sm font-semibold hover:bg-red-100 transition">
           Retry Request
         </button>
       </div>
@@ -128,7 +128,7 @@ function MetricsCards({ cards }) {
         return (
           <div
             key={idx}
-            className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow flex items-start justify-between">
+            className="bg-background rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow flex items-start justify-between">
             <div className="space-y-3">
               <span className="text-sm font-semibold text-slate-400 tracking-wide block uppercase">
                 {card.title}

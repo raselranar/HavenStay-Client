@@ -18,7 +18,7 @@ const GoogleAuthButton = () => {
       type="button"
       variant="lg"
       onClick={handleGoogleLogin}
-      className="w-full h-fit border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 font-medium text-sm py-2.5 rounded-xl flex items-center justify-center gap-2 transition-colors cursor-pointer">
+      className="w-full h-fit border border-gray-200 bg-background hover:bg-gray-50 text-gray-700 font-medium text-sm py-2.5 rounded-xl flex items-center justify-center gap-2 transition-colors cursor-pointer">
       <svg className="size-4" viewBox="0 0 24 24" width="16" height="16">
         <path
           fill="#EA4335"

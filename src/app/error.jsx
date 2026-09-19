@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function GlobalError({ error, reset }) {
   // Log to console for diagnostics
-  console.error(error);
+  console.error("Global Error:", error);
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-background p-6">
-      <div className="max-w-xl w-full bg-white rounded-2xl shadow-md p-8 text-center">
+      <div className="max-w-xl w-full bg-background rounded-2xl shadow-md p-8 text-center">
         <h1 className="text-2xl font-bold mb-2">Something went wrong</h1>
         <p className="text-sm text-gray-500 mb-6">
           An unexpected error occurred. Try refreshing the page or return home.

@@ -80,10 +80,10 @@ export default function RoleFeatures() {
               <Card
                 className={`p-8 h-full border border-gray-100 shadow-xs hover:shadow-md transition-shadow rounded-2xl bg-gradient-to-br ${item.bg}`}>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="p-3.5 rounded-xl bg-white border border-white/60 shadow-xs">
+                  <div className="p-3.5 rounded-xl bg-background border border-white/60 shadow-xs">
                     <Icon className={`size-6 ${item.text}`} />
                   </div>
-                  <Badge className="h-6 px-3 text-[0.625rem] bg-white/70 text-gray-700">
+                  <Badge className="h-6 px-3 text-[0.625rem] bg-background/70 text-gray-700">
                     {item.badge}
                   </Badge>
                 </div>
@@ -96,7 +96,7 @@ export default function RoleFeatures() {
                 <ul className="space-y-3 mb-8 flex-1">
                   {item.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-sm text-gray-600">
-                      <span className="mt-0.5 p-0.5 rounded-full bg-white/70">
+                      <span className="mt-0.5 p-0.5 rounded-full bg-background/70">
                         <Check className={`size-3.5 ${item.text}`} />
                       </span>
                       <span className="leading-relaxed">{feature}</span>
@@ -104,8 +104,11 @@ export default function RoleFeatures() {
                   ))}
                 </ul>
 
-                <Button asChild className="w-full bg-primary">
-                  <Link href={item.href}>{item.cta}</Link>
+                {/* <Button asChild className="hover:text-blue-700 text-sm font-semibold flex items-center gap-1 transition-colors w-full">
+                </Button> */}
+                <Button className={"py-4 px-4 text-sm font-semibold"} asChild>
+                  <Link
+                    href={item.href}>{item.cta}</Link>
                 </Button>
               </Card>
             </motion.div>

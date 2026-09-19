@@ -42,7 +42,7 @@ export default function CustomerReviews() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
             viewport={{ once: true }}
-            className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200">
+            className="rounded-3xl bg-background p-6 shadow-sm border border-slate-200">
             <div className="mb-5 flex items-center gap-1 text-amber-400 text-xl">
               {Array.from({ length: review.rating }).map((_, starIndex) => (
                 <span key={starIndex}>★</span>

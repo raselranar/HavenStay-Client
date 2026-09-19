@@ -35,7 +35,7 @@ export default async function SuccessPage({ searchParams }) {
   console.log(booking);
   return (
     <main className="min-h-screen bg-slate-50 py-20 px-4 text-slate-900">
-      <div className="mx-auto max-w-3xl rounded-[2rem] border border-slate-200 bg-white p-3 shadow-xl shadow-slate-200/40">
+      <div className="mx-auto max-w-3xl rounded-[2rem] border border-slate-200 bg-background p-3 shadow-xl shadow-slate-200/40">
         <div className="mb-8 text-center">
           <p className="mb-4 text-sm uppercase tracking-[0.25em] text-indigo-600">
             Booking received
@@ -113,7 +113,7 @@ export default async function SuccessPage({ searchParams }) {
           <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:justify-end">
             <Link
               href="/dashboard/tenant/my-bookings"
-              className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50">
+              className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-background px-4 py-2 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50">
               View your bookings
             </Link>
 

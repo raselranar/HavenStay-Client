@@ -6,7 +6,7 @@ export default function DashboardLoading() {
   return (
     <DashboardShell>
       <div className="min-h-[60vh] flex-1 flex items-center p-6">
-        <div className="bg-white rounded-2xl shadow p-8 text-center">
+        <div className="bg-background rounded-2xl shadow p-8 text-center">
           <div className="flex items-center justify-center mb-4">
             <Spinner className="size-10 text-primary" />
           </div>

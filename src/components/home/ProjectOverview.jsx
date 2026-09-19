@@ -35,7 +35,7 @@ export default function ProjectOverview() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
           <motion.div
@@ -80,7 +80,7 @@ export default function ProjectOverview() {
                   transition={{ duration: 0.45, delay: idx * 0.08 }}
                   viewport={{ once: true }}
                   className="p-6 rounded-2xl bg-slate-50 border border-slate-100 shadow-xs">
-                  <div className="mb-4 p-3 rounded-xl bg-white border border-slate-100 w-fit">
+                  <div className="mb-4 p-3 rounded-xl bg-background border border-slate-100 w-fit">
                     <Icon className="size-5 text-blue-600" />
                   </div>
                   <h3 className="font-bold text-gray-900 text-base mb-1.5">

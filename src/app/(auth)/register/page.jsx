@@ -110,7 +110,7 @@ export default function RegisterPage() {
       </div>
 
       {/* Register Container */}
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xs border border-gray-100 p-8">
+      <div className="w-full max-w-md bg-background rounded-2xl shadow-xs border border-gray-100 p-8">
         {error && (
           <div className="mb-4 text-xs bg-red-50 text-red-600 p-3 rounded-lg border border-red-100">
             {error}
@@ -129,7 +129,7 @@ export default function RegisterPage() {
                 {...register("name", { required: "Full name is required" })}
                 type="text"
                 placeholder="John Doe"
-                className={`w-full text-sm pl-10 pr-4 py-2.5 bg-white border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
+                className={`w-full text-sm pl-10 pr-4 py-2.5 bg-background border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
                   errors.name
                     ? "border-red-500 focus:border-red-500"
                     : "border-gray-200"
@@ -160,7 +160,7 @@ export default function RegisterPage() {
                 })}
                 type="email"
                 placeholder="john@example.com"
-                className={`w-full text-sm pl-10 pr-4 py-2.5 bg-white border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
+                className={`w-full text-sm pl-10 pr-4 py-2.5 bg-background border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
                   errors.email
                     ? "border-red-500 focus:border-red-500"
                     : "border-gray-200"
@@ -208,7 +208,7 @@ export default function RegisterPage() {
                 </>
               )}
               {uploadingPhoto && (
-                <div className="absolute inset-0 bg-white/80 flex items-center justify-center text-xs text-gray-500 rounded-xl">
+                <div className="absolute inset-0 bg-background/80 flex items-center justify-center text-xs text-gray-500 rounded-xl">
                   Uploading...
                 </div>
               )}
@@ -238,7 +238,7 @@ export default function RegisterPage() {
                 })}
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
-                className={`w-full text-sm pl-10 pr-10 py-2.5 bg-white border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
+                className={`w-full text-sm pl-10 pr-10 py-2.5 bg-background border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
                   errors.password
                     ? "border-red-500 focus:border-red-500"
                     : "border-gray-200"
@@ -302,7 +302,7 @@ export default function RegisterPage() {
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-100"></div>
           </div>
-          <span className="relative bg-white px-3 text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+          <span className="relative bg-background px-3 text-[10px] font-bold text-gray-400 uppercase tracking-wider">
             Or register with
           </span>
         </div>

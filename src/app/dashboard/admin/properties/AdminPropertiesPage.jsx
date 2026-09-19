@@ -164,7 +164,7 @@ export default function AdminPropertiesPage({ items = [] }) {
 
       <hr className="border-gray-200" />
 
-      <div className="overflow-x-auto rounded-xl border border-gray-100 bg-white shadow-sm">
+      <div className="overflow-x-auto rounded-xl border border-gray-100 bg-background shadow-sm">
         <table className="w-full border-collapse text-left text-sm text-gray-500">
           <thead className="bg-gray-50  uppercase text-gray-700 tracking-wider">
             <tr className="*:text-xs">
@@ -346,7 +346,7 @@ export default function AdminPropertiesPage({ items = [] }) {
             setFeedbackText("");
           }
         }}>
-        <DialogContent className="max-w-md bg-white">
+        <DialogContent className="max-w-md bg-background">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-red-600">
               <ShieldAlert className="h-5 w-5" />

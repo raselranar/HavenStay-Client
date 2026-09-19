@@ -45,7 +45,7 @@ export default function OwnerBookings({ initialBookings = [] }) {
             bookings.map((row) => (
               <div
                 key={row._id}
-                className="rounded-3xl border border-gray-200 bg-white p-4 shadow-sm">
+                className="rounded-3xl border border-gray-200 bg-background p-4 shadow-sm">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="text-sm font-semibold text-gray-900">
@@ -104,7 +104,7 @@ export default function OwnerBookings({ initialBookings = [] }) {
               </div>
             ))
           ) : (
-            <div className="rounded-3xl border border-gray-200 bg-white p-8 text-center text-sm text-gray-400">
+            <div className="rounded-3xl border border-gray-200 bg-background p-8 text-center text-sm text-gray-400">
               No booking requests found.
             </div>
           )}

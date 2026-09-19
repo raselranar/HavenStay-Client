@@ -47,7 +47,7 @@ export default function PopularCities() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-background">
       {/* Title Block aligning with Home Page typography */}
       <div className="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
@@ -94,7 +94,7 @@ export default function PopularCities() {
             </div>
 
             {/* Top Badge Action */}
-            <div className="absolute top-4 right-4 p-2.5 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+            <div className="absolute top-4 right-4 p-2.5 rounded-full bg-background/10 backdrop-blur-md text-white border border-white/20 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
               <ArrowUpRight className="size-4" />
             </div>
 

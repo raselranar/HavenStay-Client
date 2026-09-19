@@ -180,7 +180,7 @@ export default function PropertyDetailsPage({
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
             isFavorite
               ? "bg-rose-50 border-rose-200 text-rose-600 shadow-xs"
-              : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"
+              : "bg-background border-gray-200 text-gray-600 hover:bg-gray-50"
           }`}
           disabled={isFavorite}>
           <Heart className={`size-4 ${isFavorite ? "fill-current" : ""}`} />
@@ -229,7 +229,7 @@ export default function PropertyDetailsPage({
         {/* Left Side Content Container Details */}
         <div className="lg:col-span-2 space-y-8">
           {/* Quick Specification Badges Row */}
-          <div className="grid grid-cols-3 gap-4 bg-white border border-gray-100 rounded-2xl p-4 text-center shadow-xs">
+          <div className="grid grid-cols-3 gap-4 bg-background border border-gray-100 rounded-2xl p-4 text-center shadow-xs">
             <div className="flex flex-col items-center justify-center p-2 border-r border-gray-50">
               <BedDouble className="size-5 text-indigo-500 mb-1" />
               <span className="text-xs text-gray-400 font-medium">
@@ -264,7 +264,7 @@ export default function PropertyDetailsPage({
             <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400">
               About the Property
             </h3>
-            <p className="text-sm text-gray-600 leading-relaxed bg-white border border-gray-100 rounded-2xl p-5 shadow-xs">
+            <p className="text-sm text-gray-600 leading-relaxed bg-background border border-gray-100 rounded-2xl p-5 shadow-xs">
               {propertyData.description}
             </p>
           </div>
@@ -279,7 +279,7 @@ export default function PropertyDetailsPage({
                 {propertyData.amenities.map((amenity, index) => (
                   <div
                     key={index}
-                    className="bg-white border border-gray-100 p-3.5 rounded-xl flex items-center gap-2.5 shadow-xs">
+                    className="bg-background border border-gray-100 p-3.5 rounded-xl flex items-center gap-2.5 shadow-xs">
                     <div className="size-2 rounded-full bg-primary" />
                     <span className="text-xs font-semibold text-gray-700">
                       {amenity}
@@ -296,7 +296,7 @@ export default function PropertyDetailsPage({
               <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400">
                 Extra Specifications
               </h3>
-              <div className="bg-white border border-gray-100 p-5 rounded-2xl flex items-start gap-3 shadow-xs">
+              <div className="bg-background border border-gray-100 p-5 rounded-2xl flex items-start gap-3 shadow-xs">
                 <Sparkles className="size-5 text-amber-500 shrink-0 mt-0.5" />
                 <p className="text-xs text-gray-600 font-medium leading-relaxed">
                   {propertyData.extraFeatures}
@@ -311,7 +311,7 @@ export default function PropertyDetailsPage({
               Reviews & Discussion
             </h3>
 
-            <div className="bg-white border border-gray-100 rounded-2xl p-5 shadow-xs">
+            <div className="bg-background border border-gray-100 rounded-2xl p-5 shadow-xs">
               <h4 className="text-sm font-semibold text-gray-900">
                 Share your experience
               </h4>
@@ -353,7 +353,7 @@ export default function PropertyDetailsPage({
                           message: "Review must be at least 10 characters.",
                         },
                       })}
-                      className="w-full text-xs border border-gray-200 rounded-2xl p-3 bg-white outline-none focus:border-primary"
+                      className="w-full text-xs border border-gray-200 rounded-2xl p-3 bg-background outline-none focus:border-primary"
                       placeholder="Share your stay experience..."
                     />
                     {reviewErrors.comment && (
@@ -390,7 +390,7 @@ export default function PropertyDetailsPage({
                   .map((rev, i) => (
                     <div
                       key={i}
-                      className="bg-white border border-gray-100 p-5 rounded-2xl shadow-xs space-y-2">
+                      className="bg-background border border-gray-100 p-5 rounded-2xl shadow-xs space-y-2">
                       <div className="flex justify-between items-start">
                         <div>
                           <h5 className="text-xs font-bold text-gray-900">
@@ -420,7 +420,7 @@ export default function PropertyDetailsPage({
 
         {/* Right Side Control Sidebar Container Sticky Card Layout */}
         <div className="space-y-6 lg:sticky lg:top-8">
-          <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm space-y-4">
+          <div className="bg-background border border-gray-100 rounded-3xl p-6 shadow-sm space-y-4">
             {/* Dynamic Rent Price Module */}
             <div className="flex justify-between items-baseline border-b border-gray-50 pb-4">
               <span className="text-xs text-gray-400 font-semibold uppercase tracking-wider">
@@ -458,7 +458,7 @@ export default function PropertyDetailsPage({
 
           {/* Owner Accountability Contact Box */}
           {propertyData.ownerInfo && (
-            <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-xs flex items-center gap-3">
+            <div className="bg-background border border-gray-100 rounded-2xl p-4 shadow-xs flex items-center gap-3">
               <div className="size-9 rounded-full bg-indigo-50 flex items-center justify-center font-black text-xs text-primary">
                 {propertyData.ownerInfo.name?.charAt(0) || "O"}
               </div>
@@ -481,7 +481,7 @@ export default function PropertyDetailsPage({
       {/* Booking Form Dialog Modal Context */}
       {bookingModalOpen && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 backdrop-blur-xs animate-in fade-in duration-200">
-          <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl p-6 border border-gray-100 relative space-y-4">
+          <div className="bg-background rounded-2xl w-full max-w-md shadow-2xl p-6 border border-gray-100 relative space-y-4">
             {/* Modal Exit Header Action Row */}
             <div className="flex justify-between items-center pb-2 border-b border-gray-50">
               <div>
@@ -515,7 +515,7 @@ export default function PropertyDetailsPage({
                     {...register("moveInDate", {
                       required: "Move-in selection date is required",
                     })}
-                    className="w-full text-xs pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl outline-none focus:border-primary"
+                    className="w-full text-xs pl-10 pr-4 py-2.5 bg-background border border-gray-200 rounded-xl outline-none focus:border-primary"
                   />
                 </div>
                 {errors.moveInDate && (
@@ -538,7 +538,7 @@ export default function PropertyDetailsPage({
                     {...register("contactNumber", {
                       required: "Contact cellular identity is required",
                     })}
-                    className="w-full text-xs pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl outline-none focus:border-primary"
+                    className="w-full text-xs pl-10 pr-4 py-2.5 bg-background border border-gray-200 rounded-xl outline-none focus:border-primary"
                   />
                 </div>
                 {errors.contactNumber && (
@@ -559,7 +559,7 @@ export default function PropertyDetailsPage({
                     rows={3}
                     placeholder="Enter any specific arrangement parameters requested..."
                     {...register("additionalNotes")}
-                    className="w-full text-xs pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl outline-none focus:border-primary resize-none"
+                    className="w-full text-xs pl-10 pr-4 py-2.5 bg-background border border-gray-200 rounded-xl outline-none focus:border-primary resize-none"
                   />
                 </div>
               </div>

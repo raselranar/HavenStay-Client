@@ -48,7 +48,7 @@ export default function Banner() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="mb-4">
-          <Badge className="h-7 px-3.5 text-xs bg-white/15 text-white border border-white/25 backdrop-blur-md">
+          <Badge className="h-7 px-3.5 text-xs bg-background/15 text-white border border-white/25 backdrop-blur-md">
             Full-Stack Property Rental &amp; Management Platform
           </Badge>
         </motion.div>
@@ -77,11 +77,11 @@ export default function Banner() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           onSubmit={handleSearch}
-          className="bg-white/80 backdrop-blur-md p-4 rounded-2xl shadow-xl text-gray-800  items-center">
+          className="bg-background/30 p-4 rounded-2xl shadow-xl text-slate-900 border border-white/50 mb-4 items-center">
           <div className="flex flex-wrap gap-4 justify-center items-center">
             <div className="flex gap-4 flex-1">
               <Input
-                className="px-3 py-2 h-fit"
+                className="bg-white/90 text-slate-900 placeholder:text-slate-500 border-slate-200"
                 placeholder="Search by location"
                 name="search"
               />
@@ -89,10 +89,10 @@ export default function Banner() {
 
             <div className="flex gap-3 justify-end items-center">
               <Select name="type">
-                <SelectTrigger size="md">
-                  <SelectValue placeholder="All Types" />
+                <SelectTrigger className="bg-white/90 text-slate-900 border-slate-200 hover:bg-white focus:bg-white">
+                  <SelectValue placeholder="All Types" className="text-sm" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent >
                   <SelectGroup>
                     <SelectLabel>Property Type</SelectLabel>
                     <SelectItem value="">All Types</SelectItem>
@@ -105,23 +105,21 @@ export default function Banner() {
                 </SelectContent>
               </Select>
 
-              {/* min price */}
               <Input
                 type="number"
                 name="minPrice"
-                className="px-3 py-2 h-fit"
+                className="bg-white/90 text-slate-900 placeholder:text-slate-500 border-slate-200"
                 placeholder="Min Price"
               />
 
-              {/* max price */}
               <Input
                 type="number"
                 name="maxPrice"
-                className="px-3 py-2 h-fit"
+                className="bg-white/90 text-slate-900 placeholder:text-slate-500 border-slate-200"
                 placeholder="Max Price"
               />
             </div>
-            <Button size="lg" type="submit" className="bg-primary">
+            <Button size="lg" type="submit" className="bg-primary text-white hover:bg-primary/90">
               <Search className="size-4" /> Search
             </Button>
           </div>

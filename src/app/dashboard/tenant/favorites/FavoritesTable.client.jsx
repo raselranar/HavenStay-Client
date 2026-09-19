@@ -60,7 +60,7 @@ export default function FavoritesTable({ initialFavorites = [], userId }) {
 
   if (!favorites || favorites.length === 0) {
     return (
-      <div className="py-20 text-center border border-gray-100 rounded-2xl bg-white">
+      <div className="py-20 text-center border border-gray-100 rounded-2xl bg-background">
         <p className="text-sm text-gray-500 font-medium">
           You have no favorites yet.
         </p>
@@ -69,7 +69,7 @@ export default function FavoritesTable({ initialFavorites = [], userId }) {
   }
 
   return (
-    <div className="overflow-x-auto bg-white border border-gray-100 rounded-2xl shadow-xs">
+    <div className="overflow-x-auto bg-background border border-gray-100 rounded-2xl shadow-xs">
       <table className="min-w-full text-left text-xs border-collapse">
         <thead>
           <tr className="border-b border-gray-100 text-gray-500 font-semibold bg-gray-50/50">

@@ -102,7 +102,7 @@ export default function AddPropertyPage({ ownerData }) {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-6 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+        className="space-y-6 bg-background p-6 rounded-xl border border-gray-100 shadow-sm">
         {/* Core Info */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div>

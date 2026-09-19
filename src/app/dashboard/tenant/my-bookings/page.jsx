@@ -10,7 +10,7 @@ const MyBookingPage = async () => {
   console.log(bookings);
 
   return (
-    <div className="bg-white border border-gray-100 rounded-2xl shadow-xs p-6">
+    <div className="bg-background border border-gray-100 rounded-2xl shadow-xs p-6">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold text-gray-900 tracking-wide">
           My Bookings

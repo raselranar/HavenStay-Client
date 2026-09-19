@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function UnauthorizedPage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-background p-6">
-      <div className="max-w-xl w-full bg-white rounded-3xl shadow-lg p-10 text-center">
+      <div className="max-w-xl w-full bg-background rounded-3xl shadow-lg p-10 text-center">
         <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-red-50 text-red-600">
           <span className="text-3xl font-bold">!</span>
         </div>

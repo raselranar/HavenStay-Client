@@ -26,7 +26,7 @@ const MonthlyEarningsChart = ({ data }) => {
   //   { name: 'Dec', earnings: 0 }
   // ]
   return (
-    <div className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm">
+    <div className="bg-background rounded-2xl border border-slate-100 p-6 shadow-sm">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 pb-4 border-b border-slate-50">
         <div>
           <h2 className="text-lg font-bold text-slate-800 flex items-center gap-2">

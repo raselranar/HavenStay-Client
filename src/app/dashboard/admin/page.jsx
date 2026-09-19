@@ -46,7 +46,7 @@ export default function AdminAnalyticsPage({ systemStats, chartsData }) {
 
       {/* Metric Overviews Cards */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-xl bg-white p-6 border border-gray-100 shadow-sm flex items-center justify-between">
+        <div className="rounded-xl bg-background p-6 border border-gray-100 shadow-sm flex items-center justify-between">
           <div>
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
               Total Listings
@@ -60,7 +60,7 @@ export default function AdminAnalyticsPage({ systemStats, chartsData }) {
           </div>
         </div>
 
-        <div className="rounded-xl bg-white p-6 border border-gray-100 shadow-sm flex items-center justify-between">
+        <div className="rounded-xl bg-background p-6 border border-gray-100 shadow-sm flex items-center justify-between">
           <div>
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
               Platform Users
@@ -74,7 +74,7 @@ export default function AdminAnalyticsPage({ systemStats, chartsData }) {
           </div>
         </div>
 
-        <div className="rounded-xl bg-white p-6 border border-gray-100 shadow-sm flex items-center justify-between">
+        <div className="rounded-xl bg-background p-6 border border-gray-100 shadow-sm flex items-center justify-between">
           <div>
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
               Gross Bookings Volume
@@ -88,7 +88,7 @@ export default function AdminAnalyticsPage({ systemStats, chartsData }) {
           </div>
         </div>
 
-        <div className="rounded-xl bg-white p-6 border border-gray-100 shadow-sm flex items-center justify-between">
+        <div className="rounded-xl bg-background p-6 border border-gray-100 shadow-sm flex items-center justify-between">
           <div>
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
               Pending Tasks
@@ -104,7 +104,7 @@ export default function AdminAnalyticsPage({ systemStats, chartsData }) {
       </div>
 
       {/* Property Status Distribution Chart */}
-      <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+      <div className="rounded-xl border border-gray-100 bg-background p-6 shadow-sm">
         <div className="mb-6">
           <h2 className="text-lg font-bold text-gray-900">
             Property Verification Metrics

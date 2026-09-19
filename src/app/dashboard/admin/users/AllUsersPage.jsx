@@ -79,7 +79,7 @@ export default function AllUsersPage({ initialUsers = [] }) {
               return (
                 <div
                   key={userId}
-                  className="rounded-3xl border border-gray-200 overflow-hidden bg-white p-4 shadow-sm">
+                  className="rounded-3xl border border-gray-200 overflow-hidden bg-background p-4 shadow-sm">
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <div className="flex items-center sm:gap-3 text-sm font-semibold text-gray-900">
@@ -132,13 +132,13 @@ export default function AllUsersPage({ initialUsers = [] }) {
               );
             })
           ) : (
-            <div className="rounded-3xl border border-gray-200 bg-white p-8 text-center text-sm text-gray-400">
+            <div className="rounded-3xl border border-gray-200 bg-background p-8 text-center text-sm text-gray-400">
               No registered system profiles located.
             </div>
           )}
         </div>
 
-        <div className="hidden sm:block overflow-x-auto rounded-xl border border-gray-100 bg-white shadow-sm">
+        <div className="hidden sm:block overflow-x-auto rounded-xl border border-gray-100 bg-background shadow-sm">
           <table className="w-full border-collapse text-left *:text-sm text-gray-500">
             <thead className="bg-gray-50 text-xs uppercase text-gray-700 tracking-wider">
               <tr className="*:text-sm">

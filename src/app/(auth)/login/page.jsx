@@ -72,7 +72,7 @@ export default function LoginPage() {
       </div>
 
       {/* Main Login Box */}
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xs border border-gray-100 p-8">
+      <div className="w-full max-w-md bg-background rounded-2xl shadow-xs border border-gray-100 p-8">
         <h2 className="text-lg font-bold text-gray-900 mb-1">
           Login to Account
         </h2>
@@ -103,7 +103,7 @@ export default function LoginPage() {
                 })}
                 type="email"
                 placeholder="name@company.com"
-                className={`w-full text-sm pl-10 pr-4 py-2.5 bg-white border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
+                className={`w-full text-sm pl-10 pr-4 py-2.5 bg-background border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
                   errors.email
                     ? "border-red-500 focus:border-red-500"
                     : "border-gray-200"
@@ -135,7 +135,7 @@ export default function LoginPage() {
                 {...register("password", { required: "Password is required" })}
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
-                className={`w-full text-sm pl-10 pr-10 py-2.5 bg-white border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
+                className={`w-full text-sm pl-10 pr-10 py-2.5 bg-background border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
                   errors.password
                     ? "border-red-500 focus:border-red-500"
                     : "border-gray-200"
@@ -190,7 +190,7 @@ export default function LoginPage() {
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-100"></div>
           </div>
-          <span className="relative bg-white px-3 text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+          <span className="relative bg-background px-3 text-[10px] font-bold text-gray-400 uppercase tracking-wider">
             Or continue with
           </span>
         </div>

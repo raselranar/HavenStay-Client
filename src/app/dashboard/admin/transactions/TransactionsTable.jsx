@@ -62,7 +62,7 @@ export default function TransactionsTable({ initialTransactions = [] }) {
       <hr className="border-gray-200" />
 
       {/* Data Layout Grid */}
-      <div className="overflow-x-auto rounded-xl border border-gray-100 bg-white shadow-sm">
+      <div className="overflow-x-auto rounded-xl border border-gray-100 bg-background shadow-sm">
         <table className="w-full border-collapse text-left text-sm text-gray-500">
           <thead className="bg-gray-50  uppercase text-gray-700 tracking-wider">
             <tr className="*:text-xs">

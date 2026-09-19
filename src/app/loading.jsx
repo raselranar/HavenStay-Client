@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Loading() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-background p-6">
-      <div className="max-w-xl w-full bg-white rounded-2xl shadow-md p-8 text-center">
+      <div className="max-w-xl w-full bg-background rounded-2xl shadow-md p-8 text-center">
         <div className="flex items-center justify-center mb-6">
           <Spinner className="size-10 text-primary" />
         </div>

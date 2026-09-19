@@ -14,7 +14,7 @@ export default async function Home() {
   const featuredProperties = await serverFetch("/api/properties/featured");
   const recentProperties = await serverFetch("/api/properties/recent");
   return (
-    <section className="min-h-screen bg-white">
+    <section className="min-h-screen bg-background">
       <Banner />
       <ProjectOverview />
       <RoleFeatures />

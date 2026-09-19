@@ -53,7 +53,7 @@ export default async function TenantDashboard() {
         {analyticsData.map((card, i) => (
           <div
             key={i}
-            className="bg-white border border-gray-100 p-6 rounded-2xl shadow-xs relative flex flex-col justify-between h-36">
+            className="bg-background border border-gray-100 p-6 rounded-2xl shadow-xs relative flex flex-col justify-between h-36">
             <div className="flex justify-between items-start">
               <span className=" font-bold text-gray-400 uppercase tracking-wider">
                 {card.label}
