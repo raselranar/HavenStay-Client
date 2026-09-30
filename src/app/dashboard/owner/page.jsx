@@ -1,24 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import {
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Cartogrid,
-  Tooltip,
-  AreaChart,
-  Area,
-} from "recharts";
 import {
   Banknote,
   Building,
   CalendarCheck,
   Loader2,
-  ArrowUpRight,
-  TrendingUp,
 } from "lucide-react";
 import { protectedFetch } from "@/lib/core/server";
 import { useRouter } from "next/navigation";
@@ -35,7 +21,7 @@ export default function OwnerAnalyticsDashboard() {
       try {
         setLoading(true);
         const analytics = await protectedFetch("/api/owner/analytics");
-        console.log(analytics);
+
         setMetrics(analytics);
       } catch (err) {
         console.error("Failed fetching dashboard metrics:", err);

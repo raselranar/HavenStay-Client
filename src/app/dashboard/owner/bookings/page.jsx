@@ -11,7 +11,7 @@ const page = async () => {
   const ownerId = userSession?.user?.id;
   // Expect backend route to return bookings for owner
   const bookings = await protectedFetch(`/api/owner/bookings/${ownerId}`);
-  console.log(bookings);
+
 
   return <OwnerBookings initialBookings={bookings || []} />;
 };

@@ -5,6 +5,7 @@ export const metadata = {
 };
 const page = async () => {
   const transactions = await protectedFetch("/api/admin/transactions");
+  console.log({ transactions })
   return <TransactionsTable initialTransactions={transactions} />;
 };
 export default page;

@@ -6,7 +6,7 @@ export const metadata = {
 };
 const page = async () => {
   const users = await protectedFetch("/api/admin/users");
-  console.log(users);
+  console.log({ users });
   return <AllUsersPage initialUsers={users} />;
 };
 export default page;

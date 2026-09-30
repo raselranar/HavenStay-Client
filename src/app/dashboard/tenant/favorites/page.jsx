@@ -13,11 +13,11 @@ export const metadata = {
 
 const FavoritesPage = async () => {
   const session = await getUserSession();
-  console.log(session);
+
   const favorites = await protectedFetch(
     `/api/properties/favorites/?userId=${session?.session?.userId}`,
   );
-  console.log(favorites);
+
 
   return (
     <div>

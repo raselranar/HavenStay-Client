@@ -7,7 +7,6 @@ export async function proxy(request) {
   // if user not logged in
   if (!session) return NextResponse.redirect(new URL("/login", request.url));
 
-  //   console.log(url);
   //   if (url.pathname.startsWith("/properties")) {
   //     return NextResponse.redirect(new URL("/login", request.url));
   //   }

@@ -147,14 +147,12 @@ export default function DashboardShell({ children, user = null }) {
                     return (
                       <SidebarMenuItem key={item.href}>
                         <Link href={item.href}>
-                          {console.log(isActive)}
                           <SidebarMenuButton
                             asChild
-                            className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-semibold tracking-wide ${
-                              isActive
+                            className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-semibold tracking-wide ${isActive
                                 ? "bg-primary text-white shadow-xs hover:bg-primary/80 hover:text-white"
                                 : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
-                            }`}>
+                              }`}>
                             <div>
                               <Icon className="size-4 shrink-0" />
                               <span>{item.name}</span>

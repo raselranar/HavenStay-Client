@@ -28,7 +28,7 @@ export default function PropertyDetailsPage({
   userId,
   userName,
 }) {
-  console.log(userName);
+
   const router = useRouter();
   // Directly initializing state using property data arrays
   const [activeImage, setActiveImage] = useState(propertyData?.images?.[0]);
@@ -130,7 +130,7 @@ export default function PropertyDetailsPage({
         rating: reviewRating,
         comment: data.comment,
       });
-      console.log(response);
+
       if (!response?.review) {
         throw new Error("Review submission failed.");
       }
@@ -149,7 +149,7 @@ export default function PropertyDetailsPage({
     if (!propertyData) {
       router.push("/unauthorized");
     }
-  }, []);
+  }, [propertyData, router]);
   if (!propertyData) {
     return (
       <div className="text-center py-24 text-sm text-gray-500">
@@ -177,11 +177,10 @@ export default function PropertyDetailsPage({
 
         <button
           onClick={handleAddToFavorites}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
-            isFavorite
-              ? "bg-rose-50 border-rose-200 text-rose-600 shadow-xs"
-              : "bg-background border-gray-200 text-gray-600 hover:bg-gray-50"
-          }`}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${isFavorite
+            ? "bg-rose-50 border-rose-200 text-rose-600 shadow-xs"
+            : "bg-background border-gray-200 text-gray-600 hover:bg-gray-50"
+            }`}
           disabled={isFavorite}>
           <Heart className={`size-4 ${isFavorite ? "fill-current" : ""}`} />
           {isFavorite ? "Added to Favorites" : "Save to Favorites"}
@@ -190,7 +189,7 @@ export default function PropertyDetailsPage({
 
       {/* Grid Multi-Image Matrix Showcase UI */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
-        <div className="lg:col-span-2 h-[420px] rounded-2xl overflow-hidden bg-gray-100 border border-gray-100 relative">
+        <div className="lg:col-span-2 h-105 rounded-2xl overflow-hidden bg-gray-100 border border-gray-100 relative">
           {activeImage && (
             <Image
               fill
@@ -202,16 +201,15 @@ export default function PropertyDetailsPage({
             />
           )}
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 h-fit lg:h-[420px]">
+        <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 h-fit lg:h-105">
           {propertyData.images?.map((img, i) => (
             <div
               key={i}
               onClick={() => setActiveImage(img)}
-              className={`h-48 lg:h-[202px] rounded-2xl overflow-hidden bg-gray-100 border-2 cursor-pointer transition-all relative ${
-                activeImage === img
-                  ? "border-primary"
-                  : "border-transparent opacity-80 hover:opacity-100"
-              }`}>
+              className={`h-48 lg:h-50.5 rounded-2xl overflow-hidden bg-gray-100 border-2 cursor-pointer transition-all relative ${activeImage === img
+                ? "border-primary"
+                : "border-transparent opacity-80 hover:opacity-100"
+                }`}>
               <Image
                 src={img}
                 alt={`Thumbnail preview ${i + 1}`}
@@ -329,11 +327,10 @@ export default function PropertyDetailsPage({
                           key={value}
                           type="button"
                           onClick={() => setReviewRating(value)}
-                          className={`rounded-xl p-2 transition-colors ${
-                            value <= reviewRating
-                              ? "bg-amber-100 text-amber-600"
-                              : "bg-gray-100 text-gray-400 hover:bg-gray-200"
-                          }`}>
+                          className={`rounded-xl p-2 transition-colors ${value <= reviewRating
+                            ? "bg-amber-100 text-amber-600"
+                            : "bg-gray-100 text-gray-400 hover:bg-gray-200"
+                            }`}>
                           <Star className="size-4" />
                         </button>
                       ))}

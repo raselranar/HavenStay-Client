@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const path = usePathname();
-  console.log(path);
+
   if (path && path.includes("/dashboard")) {
     return null; // Don't render the navbar on dashboard pages
   }

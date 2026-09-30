@@ -42,7 +42,7 @@ export default function FavoritesTable({ initialFavorites = [], userId }) {
         _id: id,
       });
       if (res.deletedCount) {
-        console.log("object");
+
         setFavorites((prev) => prev.filter((f) => f._id !== id));
         setConfirmOpen(false);
         setSelectedFavorite(null);
@@ -156,7 +156,6 @@ export default function FavoritesTable({ initialFavorites = [], userId }) {
             <DialogClose asChild>
               <Button variant="outline">Cancel</Button>
             </DialogClose>
-            {console.log({ loadingId, selectedFavorite })}
             <Button
               type="button"
               variant="destructive"

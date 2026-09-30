@@ -21,7 +21,7 @@ export default function Banner() {
   const router = useRouter();
 
   const handleSearch = (e) => {
-    console.log(e);
+
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const rawEntries = Object.fromEntries(formData.entries());

@@ -60,7 +60,7 @@ export default function AddPropertyPage({ ownerData }) {
         "POST",
         payload,
       );
-      console.log(response);
+
       if (response?.insertedId) {
         setMessage({
           type: "success",
@@ -325,7 +325,7 @@ export default function AddPropertyPage({ ownerData }) {
 
         {/* Images Submission Handling */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 flex items-center gap-1">
+          <label className="text-sm font-medium text-gray-700 flex items-center gap-1">
             <ImagePlus className="h-4 w-4 text-gray-400" />
             Property Images URLs (One URL per line)
           </label>

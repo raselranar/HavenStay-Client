@@ -14,21 +14,52 @@ import {
 } from "recharts";
 
 export default function AdminAnalyticsPage({ systemStats, chartsData }) {
-  // Default fallbacks matching real-time structural specs
+  const hasStats =
+    systemStats &&
+    Object.values(systemStats).some(
+      (value) => value !== null && value !== undefined && value !== "",
+    );
+  const hasChartData = Array.isArray(chartsData) && chartsData.length > 0;
+
+  if (!hasStats && !hasChartData) {
+    return (
+      <div className="w-full space-y-8 p-6 lg:p-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+            Admin Console Overview
+          </h1>
+          <p className="mt-2 text-sm text-gray-500">
+            Global operations control, structural verification queues, and system
+            metric monitors.
+          </p>
+        </div>
+
+        <hr className="border-gray-200" />
+
+        <div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50/60 p-10 text-center">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-gray-400 shadow-sm ring-1 ring-gray-200">
+            <ShieldAlert className="h-6 w-6" />
+          </div>
+          <h3 className="mt-5 text-xl font-bold text-gray-900">
+            No platform metrics available yet
+          </h3>
+          <p className="mt-2 text-sm text-gray-500">
+            Listings, users, and verification data will appear here once the
+            dashboard has fresh activity.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   const stats = systemStats || {
-    totalProperties: 142,
-    totalUsers: 840,
-    totalRevenue: 34500,
-    pendingVerifications: 12,
+    totalProperties: 0,
+    totalUsers: 0,
+    totalRevenue: 0,
+    pendingVerifications: 0,
   };
 
-  const data = chartsData || [
-    { name: "Apartment", Approved: 40, Pending: 8, Rejected: 4 },
-    { name: "Villa", Approved: 24, Pending: 2, Rejected: 1 },
-    { name: "Penthouse", Approved: 15, Pending: 1, Rejected: 2 },
-    { name: "Cabin", Approved: 18, Pending: 0, Rejected: 0 },
-    { name: "Studio", Approved: 32, Pending: 1, Rejected: 2 },
-  ];
+  const data = chartsData || [];
 
   return (
     <div className="w-full space-y-8 p-6 lg:p-8">

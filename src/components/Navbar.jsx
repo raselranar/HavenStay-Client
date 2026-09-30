@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
 
 export default function Navbar({ session = null }) {
   const path = usePathname();
-  console.log(path);
+
   const [open, setOpen] = useState(false);
   const prevPath = useRef(path);
 

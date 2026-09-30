@@ -23,7 +23,7 @@ export async function POST(request) {
       ownerInfo,
       userName,
     } = body;
-    console.log({ userName });
+     
     // 1. CREATE A STRIPE CHECKOUT SESSION INSTEAD
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -56,8 +56,8 @@ export async function POST(request) {
       },
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
     });
-    // console.log(session);
-    console.log({ metadata: session.metadata });
+     
+     
 
     // 4. RETURN THE SESSION URL (This will never be null)
     return NextResponse.json({ url: session.url });

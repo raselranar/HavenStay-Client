@@ -15,14 +15,14 @@ export default async function SuccessPage({ searchParams }) {
   );
 
   const booking = session?.metadata;
-  // console.log(booking);
-  // console.log(session);
+
+
   const bookingsData = await protectedFetch(
     "/api/properties/bookings?transactionId=" + session.payment_intent.id,
   );
-  // console.log(bookingsData);
+
   if (!bookingsData || bookingsData.length === 0) {
-    // console.log("here");
+
     await serverMutate("/api/properties/bookings", "POST", {
       ...booking,
       ownerInfo: JSON.parse(booking.ownerInfo),
@@ -32,7 +32,7 @@ export default async function SuccessPage({ searchParams }) {
     });
   }
 
-  console.log(booking);
+
   return (
     <main className="min-h-screen bg-slate-50 py-20 px-4 text-slate-900">
       <div className="mx-auto max-w-3xl rounded-[2rem] border border-slate-200 bg-background p-3 shadow-xl shadow-slate-200/40">

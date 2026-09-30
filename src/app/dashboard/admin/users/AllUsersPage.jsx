@@ -18,10 +18,11 @@ import {
 import { serverMutate } from "@/lib/core/server";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
 export default function AllUsersPage({ initialUsers = [] }) {
   const router = useRouter();
+  const hasUsers = Array.isArray(initialUsers) && initialUsers.length > 0;
+
   const handleRoleChange = async (user, newRole) => {
     const userId = user.userId || user._id;
 
@@ -54,6 +55,37 @@ export default function AllUsersPage({ initialUsers = [] }) {
         return <Shield className="h-4 w-4 text-gray-500" />;
     }
   };
+
+  if (!hasUsers) {
+    return (
+      <div className="w-full space-y-8 ">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+            All Registered Users
+          </h1>
+          <p className="mt-2 text-sm text-gray-500">
+            Manage system accessibility parameters, authorize platform role
+            modifications, and track account permissions.
+          </p>
+        </div>
+
+        <hr className="border-gray-200" />
+
+        <div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50/60 p-10 text-center">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-gray-400 shadow-sm ring-1 ring-gray-200">
+            <User className="h-6 w-6" />
+          </div>
+          <h3 className="mt-5 text-xl font-bold text-gray-900">
+            No registered users yet
+          </h3>
+          <p className="mt-2 text-sm text-gray-500">
+            New account registrations will appear here once users join the
+            platform.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full space-y-8 ">
@@ -93,13 +125,12 @@ export default function AllUsersPage({ initialUsers = [] }) {
                       </div>
                     </div>
                     <span
-                      className={`whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold capitalize ${
-                        currentRole.toLowerCase() === "admin"
-                          ? "bg-red-50 text-red-700"
-                          : currentRole.toLowerCase() === "owner"
-                            ? "bg-blue-50 text-blue-700"
-                            : "bg-gray-100 text-gray-700"
-                      }`}>
+                      className={`whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold capitalize ${currentRole.toLowerCase() === "admin"
+                        ? "bg-red-50 text-red-700"
+                        : currentRole.toLowerCase() === "owner"
+                          ? "bg-blue-50 text-blue-700"
+                          : "bg-gray-100 text-gray-700"
+                        }`}>
                       {currentRole}
                     </span>
                   </div>

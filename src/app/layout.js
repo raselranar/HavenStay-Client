@@ -20,7 +20,7 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const session = await getUserSession();
 
-  // console.log(session?.user);
+   
 
   return (
     <html lang="en" className={`${inter.className} h-full antialiased`}>

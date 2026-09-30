@@ -1,34 +1,36 @@
 "use server";
 import axios from "axios";
+import { redirect } from "next/navigation";
 import { authHeaders, getUserSession } from "./session";
-import { redirect } from "next/dist/server/api-utils";
+
 const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 export const protectedFetch = async (path) => {
   const session = await getUserSession();
   const url = `${baseUrl}${path}`;
   if (!session) {
-    return redirect("/login");
+    redirect("/login");
   }
-  console.log(url);
   try {
     const response = await axios.get(url, {
       headers: await authHeaders(),
-      data: session,
+      params:{
+        role:session?.user?.role
+      }
     });
+
     return response.data;
   } catch (err) {
-    console.log(err);
+    console.log(`protectedFetch failed for ${path}:`, err);
     return null;
   }
 };
 export const serverFetch = async (path) => {
   const url = `${baseUrl}${path}`;
-  console.log(url);
   try {
     const response = await axios.get(url);
     return response.data;
   } catch (err) {
-    console.log(err);
     return null;
   }
 };
@@ -45,7 +47,6 @@ export const serverMutate = async (path, method = "POST", data = {}) => {
     });
     return response.data;
   } catch (err) {
-    console.log(err);
     return null;
   }
 };

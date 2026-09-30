@@ -11,7 +11,7 @@ const page = async () => {
   const ownerProperties = await protectedFetch(
     `/api/owner/properties/${userSession?.user?.id}`,
   );
-  console.log(ownerProperties);
+
   return <MyPropertiesPage ownerProperties={ownerProperties} />;
 };
 export default page;
