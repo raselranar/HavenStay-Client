@@ -1,4 +1,3 @@
-// src/app/login/page.js
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -103,11 +102,10 @@ export default function LoginPage() {
                 })}
                 type="email"
                 placeholder="name@company.com"
-                className={`w-full text-sm pl-10 pr-4 py-2.5 bg-background border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
-                  errors.email
+                className={`w-full text-sm pl-10 pr-4 py-2.5 bg-background border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${errors.email
                     ? "border-red-500 focus:border-red-500"
                     : "border-gray-200"
-                }`}
+                  }`}
               />
             </div>
             {errors.email && (
@@ -135,11 +133,10 @@ export default function LoginPage() {
                 {...register("password", { required: "Password is required" })}
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
-                className={`w-full text-sm pl-10 pr-10 py-2.5 bg-background border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${
-                  errors.password
+                className={`w-full text-sm pl-10 pr-10 py-2.5 bg-background border rounded-xl outline-none focus:border-primary transition-colors text-gray-900 ${errors.password
                     ? "border-red-500 focus:border-red-500"
                     : "border-gray-200"
-                }`}
+                  }`}
               />
               <Button
                 type="Button"

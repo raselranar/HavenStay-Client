@@ -6,7 +6,7 @@ export const metadata = {
 };
 
 const MyBookingPage = async () => {
-  const bookings = (await protectedFetch("/api/properties/bookings")) || [];
+  const bookings = (await protectedFetch("/api/properties/bookings/tenant")) || [];
   const hasBookings = Array.isArray(bookings) && bookings.length > 0;
 
   return (
@@ -53,10 +53,10 @@ const MyBookingPage = async () => {
                   <td className="py-3.5 px-4 text-center">
                     <span
                       className={`px-2.5 py-1 capitalize font-bold ${row?.paymentStatus?.toLowerCase() === "approved"
-                          ? " text-emerald-600 border "
-                          : row.paymentStatus === "pending"
-                            ? " text-amber-600 "
-                            : " text-red-600 "
+                        ? " text-emerald-600 border "
+                        : row.paymentStatus === "pending"
+                          ? " text-amber-600 "
+                          : " text-red-600 "
                         }`}>
                       {row.paymentStatus}
                     </span>
@@ -64,10 +64,10 @@ const MyBookingPage = async () => {
                   <td className="py-3.5 px-4 text-center">
                     <span
                       className={`capitalize px-2.5 py-1 ${row.bookingStatus?.toLowerCase() === "approved"
-                          ? " text-emerald-600 "
-                          : row.bookingStatus === "pending"
-                            ? " text-amber-600 "
-                            : " text-red-600 "
+                        ? " text-emerald-600 "
+                        : row.bookingStatus === "pending"
+                          ? " text-amber-600 "
+                          : " text-red-600 "
                         }`}>
                       {row.bookingStatus}
                     </span>

@@ -1,8 +1,7 @@
 import { protectedFetch } from "@/lib/core/server";
 import { getUserSession } from "@/lib/core/session";
-import { ArrowUpRight, Heart, Calendar, CreditCard, Home } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { Calendar, Heart, Home } from "lucide-react";
+import TenantActivityChart from "@/components/dashboard/TenantActivityChart";
 
 export const metadata = {
   title: "Tenant Dashboard",
@@ -33,6 +32,24 @@ export default async function TenantDashboard() {
       sub: "Properties rented",
       icon: Home,
       color: "text-indigo-600",
+    },
+  ];
+
+  const chartData = [
+    {
+      name: "Bookings",
+      value: analytics?.bookingsCount ?? 0,
+      color: "#3b82f6",
+    },
+    {
+      name: "Saved",
+      value: analytics?.favoritesCount ?? 0,
+      color: "#ec4899",
+    },
+    {
+      name: "Rentals",
+      value: analytics?.activeRentalsCount ?? 0,
+      color: "#6366f1",
     },
   ];
 
@@ -69,6 +86,8 @@ export default async function TenantDashboard() {
           </div>
         ))}
       </div>
+
+      <TenantActivityChart data={chartData} />
     </div>
   );
 }

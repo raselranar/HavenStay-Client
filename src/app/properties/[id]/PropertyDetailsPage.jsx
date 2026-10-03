@@ -416,7 +416,7 @@ export default function PropertyDetailsPage({
         </div>
 
         {/* Right Side Control Sidebar Container Sticky Card Layout */}
-        <div className="space-y-6 lg:sticky lg:top-8">
+        <div className="space-y-6 lg:sticky lg:top-20">
           <div className="bg-background border border-gray-100 rounded-3xl p-6 shadow-sm space-y-4">
             {/* Dynamic Rent Price Module */}
             <div className="flex justify-between items-baseline border-b border-gray-50 pb-4">
